@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -1038,7 +1039,8 @@ O Protocolo de Reposicionamento funciona em 3 etapas específicas. A primeira et
       if (webhookUrl !== 'SEU_WEBHOOK_AQUI') {
         fetch(webhookUrl, {
           method: 'POST',
-          headers: {'Content-Type':'application/json'},
+          mode: 'no-cors',
+          headers: {'Content-Type':'text/plain'},
           body: JSON.stringify({ nome: nomeUsuaria, whatsapp: '55' + num })
         }).catch(function(){});
       }
